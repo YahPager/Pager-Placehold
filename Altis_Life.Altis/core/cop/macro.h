@@ -66,3 +66,31 @@
 #define CONFIG_WEAPONS "CfgWeapons"
 #define CONFIG_MAGAZINES "CfgMagazines"
 #define CONFIG_GLASSES "CfgGlasses"
+
+//Pager's Macros
+#define CATT call _attach
+#define QUAD "C_Quadbike_01_F"
+#define HATCH "C_Hatchback_01_F"
+#define SPORT "C_Hatchback_01_sport_F"
+#define SUV "C_SUV_01_F"
+#define OFFROAD "C_Offroad_01_F"
+#define BG_OFFROAD "B_G_Offroad_01_F"
+#define HUNTER "B_MRAP_01_F"
+#define IFRIT "O_MRAP_02_F"
+#define NAP uiSleep
+#define TARGET cursorTarget
+#define vehPLAY vehicle player
+#define currPLAY currentWeapon player
+#define SHIFT (_shift) then {_handled = true;
+#define SLB setLightBrightness
+#define SLAM setLightAmbient
+#define SLAT setLightAttenuation
+#define SLI setLightIntensity
+#define SLFS setLightFlareSize
+#define SLFMD setLightFlareMaxDistance
+#define SLUF setLightUseFlare
+#define SLDL setLightDayLight
+#define SLC setLightColor
+#define LAO lightAttachObject
+#define CVL createVehicleLocal
+#define DVEH deleteVehicle
