@@ -173,7 +173,7 @@ switch (_Type) do
 	};
 };
 
-while {(alive _Veh || _Veh GVAR ["lights",false])} do
+while {(alive _Veh && _Veh GVAR ["lights",false])} do
 {
 	for [{_i=0}, {_i<_Flashes}, {_i=_i+1}] do
 	{
