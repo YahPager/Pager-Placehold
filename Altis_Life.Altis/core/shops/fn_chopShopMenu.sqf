@@ -23,7 +23,13 @@ _control = CONTROL(39400,39402);
 		_displayName = getText(configFile >> "CfgVehicles" >> _className >> "displayName");
 		_picture = getText(configFile >> "CfgVehicles" >> _className >> "picture");
 		
-		_price = M_CONFIG(getNumber,CONFIG_VEHICLES,_className,"chopShop");
+		_price = switch(playerSide) do {
+			case civilian: {SEL(M_CONFIG(getArray,CONFIG_VEHICLES,_className,"chopShop"),0)};
+			case west: {SEL(M_CONFIG(getArray,CONFIG_VEHICLES,_className,"chopShop"),1)};
+			case independent: {SEL(M_CONFIG(getArray,CONFIG_VEHICLES,_className,"chopShop"),2)};
+			case east: {SEL(M_CONFIG(getArray,CONFIG_VEHICLES,_className,"chopShop"),4)};
+		};
+
 		if(!isNil "_price" && EQUAL(count crew _x,0)) then {
 			_control lbAdd _displayName;
 			_control lbSetData [(lbSize _control)-1,str(_forEachIndex)];
