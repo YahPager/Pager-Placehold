@@ -27,6 +27,7 @@ class CfgRemoteExec {
 		F(life_fnc_gangInvite,CLIENT)
 		F(TON_fnc_clientGangKick,CLIENT)
 		F(TON_fnc_clientGangLeader,CLIENT)
+		F(TON_fnc_clientGangLeft,CLIENT)
 		F(life_fnc_lightHouse,CLIENT)
 		F(life_fnc_medicRequest,CLIENT)
 		F(life_fnc_revived,CLIENT)
@@ -55,12 +56,13 @@ class CfgRemoteExec {
 		F(life_fnc_admininfo,CLIENT)
 		F(TON_fnc_clientMessage,CLIENT)
 		F(life_fnc_licenseCheck,CLIENT)
-		F(life_fnc_licenseRead,CLIENT)
+		F(life_fnc_licensesRead,CLIENT)
 		F(life_fnc_copSearch,CLIENT)
 		F(life_fnc_copLights,CLIENT)
 		F(life_fnc_ticketPrompt,CLIENT)
 		F(life_fnc_ticketPaid,CLIENT)
-		
+		F(life_fnc_freezePlayer,CLIENT)
+
 		/* Server only functions */
 		F(bis_fnc_execvm,SERVER)
 		F(life_fnc_wantedBounty,SERVER)
@@ -94,7 +96,8 @@ class CfgRemoteExec {
 		F(TON_fnc_updateHouseContainers,SERVER)
 		F(SPY_fnc_cookieJar,SERVER)
 		F(TON_fnc_vehicleCreate,SERVER)
-		
+		F(TON_fnc_addHouse,SERVER)
+
 		/* Functions for everyone */
 		F(life_fnc_broadcast,ANYONE)
 		F(life_fnc_animSync,ANYONE)
@@ -102,7 +105,6 @@ class CfgRemoteExec {
 		F(life_fnc_corpse,ANYONE)
 		F(life_fnc_colorVehicle,ANYONE)
 		F(life_fnc_lockVehicle,ANYONE)
-		F(life_fnc_setTexture,ANYONE)
 		F(life_fnc_flashbang,ANYONE)
 		F(life_fnc_jumpFnc,ANYONE)
 		F(SPY_fnc_notifyAdmins,ANYONE)
@@ -112,11 +114,11 @@ class CfgRemoteExec {
 		F(life_fnc_simDisable,ANYONE)
 
 	};
-	
+
 	class Commands {
 		mode = 1;
 		jip = 0;
-		
+
 		F(setFuel,ANYONE)
 		F(addWeapon,ANYONE)
 		F(addMagazine,ANYONE)

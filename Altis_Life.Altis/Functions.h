@@ -16,7 +16,7 @@ class Socket_Reciever
 class Life_Client_Core
 {
 	tag = "life";
-
+	
 	class Master_Directory
 	{
 		file = "core";
@@ -28,7 +28,7 @@ class Life_Client_Core
 		class welcomeNotification {};
 		class survival {};
 	};
-
+	
 	class Admin
 	{
 		file = "core\admin";
@@ -37,8 +37,16 @@ class Life_Client_Core
 		class admingetID {};
 		class adminMenu {};
 		class adminQuery {};
+		class adminSpectate {};
+		class adminTeleport {};
+		class adminTpHere {};
+		class adminDebugCon {};
+		class adminCompensate {};
+		class adminGodMode {};
+		class adminFreeze {};
+		class adminMarkers {};
 	};
-
+	
 	class Medical_System
 	{
 		file = "core\medical";
@@ -56,7 +64,7 @@ class Life_Client_Core
 		class medicLights {};
 		class medicSiren {};
 	};
-
+	
 	class Actions
 	{
 		file = "core\actions";
@@ -92,7 +100,7 @@ class Life_Client_Core
 		class gather {};
 		class gutAnimal {};
 	};
-
+	
 	class Housing
 	{
 		file = "core\housing";
@@ -110,14 +118,13 @@ class Life_Client_Core
 		class lockHouse {};
 		class garageRefund {};
 	};
-
+	
 	class Config
 	{
 		file = "core\config";
 		class itemWeight {};
 		class taxRate {};
 		class vehicleAnimate {};
-		class weaponShopCfg {};
 		class vehicleWeightCfg {};
 		class houseConfig {};
 	};
@@ -145,7 +152,7 @@ class Life_Client_Core
 		class s_onChar {};
 		class s_onCheckedChange {};
 	};
-
+	
 	class Functions
 	{
 		file = "core\functions";
@@ -187,11 +194,11 @@ class Life_Client_Core
 		class isUIDActive {};
 		class saveGear {};
 		class loadGear {};
-		class setTextureUniform {};
 		class stripDownPlayer {};
 		class nearATM {};
+		class playerSkins {};
 	};
-
+	
 	class Network
 	{
 		file = "core\functions\network";
@@ -202,10 +209,9 @@ class Life_Client_Core
 		class jumpFnc {};
 		class soundDevice {};
 		class setFuel {};
-		class setTexture {};
 		class say3D {};
 	};
-
+	
 	class Civilian
 	{
 		file = "core\civilian";
@@ -219,8 +225,9 @@ class Life_Client_Core
 		class removeLicenses {};
 		class demoChargeTimer {};
 		class civLoadout {};
+		class freezePlayer {};
 	};
-
+	
 	class Vehicle
 	{
 		file = "core\vehicle";
@@ -236,7 +243,7 @@ class Life_Client_Core
 		class deviceMine {};
 		class addVehicle2Chain {};
 	};
-
+	
 	class Cop
 	{
 		file = "core\cop";
@@ -264,7 +271,7 @@ class Life_Client_Core
 		class copLoadout {};
 		class ticketPaid {};
 	};
-
+	
 	class Gangs
 	{
 		file = "core\gangs";
@@ -281,7 +288,7 @@ class Life_Client_Core
 		class gangDisband {};
 		class gangDisbanded {};
 	};
-
+	
 	class Shops
 	{
 		file = "core\shops";
@@ -305,7 +312,7 @@ class Life_Client_Core
 		class chopShopSelection {};
 		class chopShopSell {};
 	};
-
+	
 	class Items
 	{
 		file = "core\items";
@@ -319,7 +326,7 @@ class Life_Client_Core
 		class defuseKit {};
 		class storageBox {};
 	};
-
+	
 	class Dialog_Controls
 	{
 		file = "dialog\function";

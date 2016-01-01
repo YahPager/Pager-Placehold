@@ -1,11 +1,5 @@
-/*
-file: Config_Master.hpp
-MASTER CONFIG FILE
-
-Created by Tonic (?)
-
-Last Edit by: [RGN] noms
-*/
+#define true 1
+#define false 0
 
 #define VITEMMACRO(NAME,DISPLAYNAME,VARNAME,WEIGHT,BUYPRICE,SELLPRICE,ILLEGAL,EDIBLE,ICON) class NAME { \
 		variable = VARNAME; \
@@ -26,20 +20,16 @@ Last Edit by: [RGN] noms
 		side = SIDE; \
 	};
 
-#define true 1
-#define false 0
-#include "Config_Clothing.hpp"
-
 /*
 	Master settings for various features and functionality
 */
 class Life_Settings {
 	/* Persistent Settings */
-	save_civ_weapons = true; //Allow civilians to save weapons on them?
+	save_civ_weapons = false; //Allow civilians to save weapons on them?
 	save_virtualItems = true; //Save Virtual items (all sides)?
 
 	/* Revive system settings */
-	revive_cops = false; //true to enable cops the ability to revive everyone or false for only medics/ems.
+	revive_cops = true; //true to enable cops the ability to revive everyone or false for only medics/ems.
 	revive_fee = 1500; //Revive fee that players have to pay and medics / EMS are rewarded
 
 	/* House related settings */
@@ -60,15 +50,31 @@ class Life_Settings {
 	impound_boat = 250; //Price for impounding boats
 	impound_air = 850; //Price for impounding helicopters / planes
 
+	/* Initial Bank Amount */
+	bank_cop = 7000; //Amount of cash on bank for new cops
+	bank_civ = 3000; //Amount of cash on bank for new civillians
+	bank_med = 6500; //Amount of cash on bank for new medics
+
+	/* Paycheck Amount */
+	paycheck_cop = 500; //Payment for cops
+	paycheck_civ = 350; //Payment for civillians
+	paycheck_med = 450; //Payment for medics
+
+	/* Federal Reserve settings */
+	noatm_timer = 10; //Time in minutes that players won't be able to deposit his money after selling stolen gold
+
+	/* Spyglass settings */
+	 spyglass_init = false; //Enable or disable spyglass
+
+	/* Skins settings */
+	civ_skins = false; //Enable or disable civilian skins. Before enabling, you must add all the SEVEN files to textures folder. (It must be named as: civilian_uniform_1.jpg, civilian_uniform_2.jpg...civilian_uniform_6.jpg, civilian_uniform_7.jpg)
+
 	/* Car-shop Settings */
-	// This is a list of RENTAL ONLY vehicles - cannot be armed.
 	vehicleShop_rentalOnly[] = { "B_MRAP_01_hmg_F", "B_G_Offroad_01_armed_F" };
 
 	/* Job-related stuff */
-	// This is a list of markers on the map that are delivery points to choose from.
 	delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10", "dp_11", "dp_12", "dp_13", "dp_14", "dp_15", "dp_15", "dp_16", "dp_17", "dp_18", "dp_19", "dp_20", "dp_21", "dp_22", "dp_23", "dp_24", "dp_25" };
 
-	// List of objects that can be sold and the prices they can be sold for.
 	sellArray[] = {
 		{"arifle_sdar_F", 7500},
 		{"hgun_P07_snds_F", 650},
@@ -162,30 +168,30 @@ class VirtualItems {
 	VITEMMACRO(peach, "STR_Item_Peach", "peach", 1, 68, 55, false, 10, "icons\ico_peach.paa")
 	VITEMMACRO(tbacon, "STR_Item_TBacon", "tbacon", 1, 75, 25, false, 40, "icons\ico_tbacon.paa")
 	VITEMMACRO(donuts, "STR_Item_Donuts", "donuts", 1, 120, 60, false, 30, "icons\ico_donuts.paa")
-	VITEMMACRO(rabbit_raw, "STR_Item_Rabbit", "rabbitRaw", 2, -1, 65, false, -1, "icons\ico_meat.paa")
+	VITEMMACRO(rabbit_raw, "STR_Item_RabbitRaw", "rabbitRaw", 2, -1, 65, false, -1, "icons\ico_meat.paa")
 	VITEMMACRO(rabbit, "STR_Item_Rabbit", "rabbit", 1, 150, 115, false, 20, "icons\ico_cookedMeat.paa")
-	VITEMMACRO(salema_raw, "STR_Item_Salema", "salemaRaw", 2, -1, 45, false, -1, "icons\ico_meat.paa")
+	VITEMMACRO(salema_raw, "STR_Item_SalemaRaw", "salemaRaw", 2, -1, 45, false, -1, "icons\ico_meat.paa")
 	VITEMMACRO(salema, "STR_Item_Salema", "salema", 1, 75, 55, false, 30, "icons\ico_cookedMeat.paa")
-	VITEMMACRO(ornate_raw, "STR_Item_OrnateMeat", "ornateRaw", 2, -1, 40, false, -1, "icons\ico_meat.paa")
+	VITEMMACRO(ornate_raw, "STR_Item_OrnateRaw", "ornateRaw", 2, -1, 40, false, -1, "icons\ico_meat.paa")
 	VITEMMACRO(ornate, "STR_Item_Ornate", "ornate", 1, 175, 150, false, 25, "icons\ico_cookedMeat.paa")
-	VITEMMACRO(mackerel_raw, "STR_Item_MackerelMeat", "mackerelRaw", 4, -1, 175, false, -1, "icons\ico_meat.paa")
+	VITEMMACRO(mackerel_raw, "STR_Item_MackerelRaw", "mackerelRaw", 4, -1, 175, false, -1, "icons\ico_meat.paa")
 	VITEMMACRO(mackerel, "STR_Item_Mackerel", "mackerel", 2, 250, 200, false, 30, "icons\ico_cookedMeat.paa")
-	VITEMMACRO(tuna_raw, "STR_Item_TunaMeat", "tunaRaw", 6, -1, 700, false, -1, "icons\ico_meat.paa")
+	VITEMMACRO(tuna_raw, "STR_Item_TunaRaw", "tunaRaw", 6, -1, 700, false, -1, "icons\ico_meat.paa")
 	VITEMMACRO(tuna, "STR_Item_Tuna", "tuna", 3, 1250, 1000, false, 100, "icons\ico_cookedMeat.paa")
-	VITEMMACRO(mullet_raw, "STR_Item_MulletMeat", "mulletRaw", 4, -1, 250, false, -1, "icons\ico_meat.paa")
+	VITEMMACRO(mullet_raw, "STR_Item_MulletRaw", "mulletRaw", 4, -1, 250, false, -1, "icons\ico_meat.paa")
 	VITEMMACRO(mullet, "STR_Item_Mullet", "mullet", 2, 600, 400, false, 80, "icons\ico_cookedMeat.paa")
-	VITEMMACRO(catshark_raw, "STR_Item_CatSharkMeat", "catsharkRaw", 6, -1, 300, false, -1, "icons\ico_meat.paa")
+	VITEMMACRO(catshark_raw, "STR_Item_CatSharkRaw", "catsharkRaw", 6, -1, 300, false, -1, "icons\ico_meat.paa")
 	VITEMMACRO(catshark, "STR_Item_CatShark", "catshark", 3, 750, 500, false, 100, "icons\ico_cookedMeat.paa")
-	VITEMMACRO(turtle_raw, "STR_Item_TurtleMeat", "turtleRaw", 6, 4000, 3000, true, -1, "icons\ico_meat.paa")
+	VITEMMACRO(turtle_raw, "STR_Item_TurtleRaw", "turtleRaw", 6, 4000, 3000, true, -1, "icons\ico_meat.paa")
 	VITEMMACRO(turtle_soup, "STR_Item_TurtleSoup", "turtleSoup", 2, 2500, 1000, false, 100, "icons\ico_cookedMeat.paa")
 	VITEMMACRO(hen_raw, "STR_Item_HenRaw", "henRaw", 1, -1, 35, false, -1, "icons\ico_meat.paa")
 	VITEMMACRO(hen, "STR_Item_Hen", "hen", 1, 115, 85, false, 65, "icons\ico_cookedMeat.paa")
 	VITEMMACRO(rooster_raw, "STR_Item_RoosterRaw", "roosterRaw", 1, -1, 35, false, -1, "icons\ico_meat.paa")
-	VITEMMACRO(rooster, "STR_Item_RoosterGrilled", "rooster", 115, 85, false, 45, "icons\ico_cookedMeat.paa")
+	VITEMMACRO(rooster, "STR_Item_Rooster", "rooster", 115, 85, false, 45, "icons\ico_cookedMeat.paa")
 	VITEMMACRO(sheep_raw, "STR_Item_SheepRaw", "sheepRaw", 2, -1, 50, false, -1, "icons\ico_meat.paa")
-	VITEMMACRO(sheep, "STR_Item_SheepGrilled", "sheep", 2, 155, 115, false, 100, "icons\ico_cookedMeat.paa")
+	VITEMMACRO(sheep, "STR_Item_Sheep", "sheep", 2, 155, 115, false, 100, "icons\ico_cookedMeat.paa")
 	VITEMMACRO(goat_raw, "STR_Item_GoatRaw", "goatRaw", 2, -1, 75, false, -1, "icons\ico_meat.paa")
-	VITEMMACRO(goat, "STR_Item_GoatGrilled", "goat", 2, 175, 135, false, 100, "icons\ico_cookedMeat.paa")
+	VITEMMACRO(goat, "STR_Item_Goat", "goat", 2, 175, 135, false, 100, "icons\ico_cookedMeat.paa")
 };
 
 
@@ -220,8 +226,6 @@ class Licenses {
 	LICENSEMACRO(home,"STR_License_Home","home",75000,false,"civ")
 };
 
-
-// These are the various virtual shops and what can be sold in them.
 class VirtualShops {
 	class market {
 		name = "STR_Shops_Market";
@@ -299,4 +303,6 @@ class VirtualShops {
 	};
 };
 
+#include "Config_Clothing.hpp"
+#include "Config_Weapons.hpp"
 #include "Config_Vehicles.hpp"

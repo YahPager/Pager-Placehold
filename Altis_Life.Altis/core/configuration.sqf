@@ -1,4 +1,4 @@
-#include <macro.h>
+#include "..\script_macros.hpp"
 /*
 	Master Life Configuration File
 	This file is to setup variables for the client, there are still other configuration files in the system
@@ -33,6 +33,9 @@ life_vdFoot = viewDistance;
 life_vdCar = viewDistance;
 life_vdAir = viewDistance;
 tawvd_addon_disable = true;
+life_god = false;
+life_frozen = false;
+life_markers = false;
 
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];
@@ -59,23 +62,6 @@ CASH = 0;
 
 life_istazed = false;
 life_vehicles = [];
-
-switch (playerSide) do {
-	case west: {
-		BANK = 7000; //Starting Bank Money
-		life_paycheck = 500; //Paycheck Amount
-	};
-	
-	case civilian: {
-		BANK = 3000; //Starting Bank Money
-		life_paycheck = 350; //Paycheck Amount
-	};
-	
-	case independent: {
-		BANK = 6500;
-		life_paycheck = 450;
-	};
-};
 
 /*
 	Master Array of items?

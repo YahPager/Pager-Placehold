@@ -2,7 +2,7 @@
 /*
 	File: fn_revived.sqf
 	Author: Bryan "Tonic" Boardwine
-
+	
 	Description:
 	THANK YOU JESUS I WAS SAVED!
 */
@@ -28,8 +28,7 @@ if(BANK > (call life_revive_fee)) then {
 	BANK = 0;
 };
 
-//Retexturing of units clothing
-[] call life_fnc_setTextureUniform; // Set uniform texture
+[] call life_fnc_playerSkins;
 
 //Bring me back to life.
 player setDir _dir;
