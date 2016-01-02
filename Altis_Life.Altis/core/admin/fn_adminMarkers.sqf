@@ -28,7 +28,7 @@ if(life_markers) then {
 				PlayerMarkers = PlayerMarkers + [_x];
 		};
 	} forEach allUnits;
-	sleep 0.2;
+	uiSleep 0.2;
 };
 FinishedLoop = true;
 } else {

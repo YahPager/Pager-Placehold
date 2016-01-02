@@ -11,7 +11,7 @@ if(FETCH_CONST(life_adminlevel) < 4) exitWith {closeDialog 0; hint localize "STR
 [] spawn {
   while {dialog} do {
    closeDialog 0;
-   sleep 0.01;
+   uiSleep 0.01;
   };
 };
  

@@ -25,7 +25,7 @@ player setPos (getMarkerPos "jail_marker");
 
 if(_bad) then {
 	waitUntil {alive player};
-	sleep 1;
+	uiSleep 1;
 };
 
 //Check to make sure they goto check

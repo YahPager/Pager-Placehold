@@ -18,7 +18,7 @@ if(_unit == player) exitWith {hint localize "STR_ANOTF_Error";};
 [] spawn {
   while {dialog} do {
    closeDialog 0;
-   sleep 0.01;
+   uiSleep 0.01;
   };
 };
 

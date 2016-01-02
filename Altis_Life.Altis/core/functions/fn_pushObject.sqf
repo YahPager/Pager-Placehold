@@ -96,7 +96,7 @@ then
                   if (_thingToPush isKindOf "Ship") then
                   {
                            //hint "vehicle is kind of ship...slowing down";
-                           sleep 1;
+                           uiSleep 1;
                            _thingToPush setVelocity [0,0,0];
                   };
                   
