@@ -107,7 +107,7 @@ life_wanted_list = [];
 [] spawn {
 	private["_logic","_queue"];
 	while {true} do {
-		sleep (30 * 60);
+		uiSleep (30 * 60);
 		_logic = missionnamespace getvariable ["bis_functions_mainscope",objnull];
 		_queue = _logic getvariable "BIS_fnc_MP_queue";
 		_logic setVariable["BIS_fnc_MP_queue",[],TRUE];

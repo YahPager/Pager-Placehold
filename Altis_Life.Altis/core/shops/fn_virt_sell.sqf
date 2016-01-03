@@ -45,7 +45,7 @@ if(EQUAL(life_shop_type,"drugdealer")) then {
 if(EQUAL(life_shop_type,"gold") && (LIFE_SETTINGS(getNumber,"noatm_timer")) > 0) then {
 	[] spawn {
 		life_use_atm = false;
-		sleep ((LIFE_SETTINGS(getNumber,"noatm_timer")) * 60);
+		uiSleep ((LIFE_SETTINGS(getNumber,"noatm_timer")) * 60);
 		life_use_atm = true;
 	};
 };

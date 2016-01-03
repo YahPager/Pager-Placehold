@@ -10,7 +10,7 @@ private "_deleted";
 _deleted = false;
 while {true} do {
 	private["_veh","_units"];
-	sleep (60 * 60);
+	uiSleep (60 * 60);
 	{
 		_veh = _x;
 		_vehicleClass = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "vehicleClass");
@@ -48,14 +48,14 @@ while {true} do {
 		};
 	} foreach vehicles;
 	
-	sleep (3 * 60); //3 minute cool-down before next cycle. 
+	uiSleep (3 * 60); //3 minute cool-down before next cycle. 
 	{
 		if((typeOf _x) in ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F", "Land_Can_V3_F","Land_Money_F","Land_Suitcase_F"]) then {
 			deleteVehicle _x;
 		};
 	} foreach (allMissionObjects "Thing");
 	
-	sleep (2 * 60);
+	uiSleep (2 * 60);
 	{
 		deleteVehicle _x;
 	} foreach (allMissionObjects "GroundWeaponHolder");

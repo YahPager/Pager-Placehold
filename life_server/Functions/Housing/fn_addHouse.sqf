@@ -19,7 +19,7 @@ diag_log format["Query: %1",_query];
 
 [_query,1] call DB_fnc_asyncCall;
 
-sleep 0.3;
+uiSleep 0.3;
 
 _query = format["SELECT id FROM houses WHERE pos='%1' AND pid='%2' AND owned='1'",_housePos,_uid];
 _queryResult = [_query,2] call DB_fnc_asyncCall;

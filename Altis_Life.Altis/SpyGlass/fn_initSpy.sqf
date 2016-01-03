@@ -148,7 +148,7 @@ for "_i" from 0 to count (_binConfigPatches)-1 do {
 		if(!((configName _patchEntry) in _patchList)) exitWith {
 			[[profileName,steamid,(configName _patchEntry)],"SPY_fnc_cookieJar",false,false] spawn life_fnc_MP;
 			[[profileName,format["Unknown Addon Patch: %1",(configName _patchEntry)]],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
-			sleep 0.5;
+			uiSleep 0.5;
 			failMission "SpyGlass";
 		};
 	};
@@ -168,7 +168,7 @@ _allowedChildren = [
 	if(!((configName _x) in _allowedChildren)) exitWith {
 		[[profileName,steamid,"Modified_MPInterrupt"],"SPY_fnc_cookieJar",false,false] spawn life_fnc_MP;
 		[[profileName,"Devcon like executor detected"],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
-		sleep 0.5;
+		uiSleep 0.5;
 		failMission "SpyGlass";
 	};
 } forEach _children;
@@ -185,11 +185,11 @@ _allowedChildren = [
 	if(_onLoad != (_x select 1) OR _onUnload != (_x select 2)) exitWith {
 		[[profileName,steamid,format["Modified_Method_%1",_x select 0]],"SPY_fnc_cookieJar",false,false] call life_fnc_MP;
 		[[profileName,format["Modified Display Method %1 (Memory Edit)",_x select 0]],"SPY_fnc_notifyAdmins",true,false] call life_fnc_MP;
-		sleep 0.5;
+		uiSleep 0.5;
 		vehicle player setVelocity[1e10,1e14,1e18]; //It's a surprise.
-		sleep 3;
+		uiSleep 3;
 		preProcessFile "SpyGlass\endoftheline.sqf";
-		sleep 2.5;
+		uiSleep 2.5;
 		failMission "SpyGlass";
 	};
 }
@@ -222,11 +222,11 @@ forEach [
 if(getText(configFile >> "CfgFunctions" >> "init") != "A3\functions_f\initFunctions.sqf") then {
 	[[profileName,steamid,"Modified_Functions_Init"],"SPY_fnc_cookieJar",false,false] call life_fnc_MP;
 	[[profileName,"Modified_Functions_Init"],"SPY_fnc_notifyAdmins",true,false] call life_fnc_MP;
-	sleep 0.5;
+	uiSleep 0.5;
 	vehicle player setVelocity[1e10,1e14,1e18]; //It's a surprise.
-	sleep 3;
+	uiSleep 3;
 	preProcessFile "SpyGlass\endoftheline.sqf";
-	sleep 2.5;
+	uiSleep 2.5;
 	failMission "SpyGlass";
 };
 
